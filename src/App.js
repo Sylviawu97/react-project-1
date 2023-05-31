@@ -2,11 +2,12 @@
 import './App.css';
 import Header from "./Components/Header";
 import { Helmet } from 'react-helmet';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 function App() {
   return (
-  
+    <Router basename={process.env.PUBLIC_URL}>
     < div className="App">
     <Helmet>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -17,6 +18,7 @@ function App() {
       <Header/>
 
     </div>
+   </Router>
   );
 }
 
