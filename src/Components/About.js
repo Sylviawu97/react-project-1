@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const About = () => {
-    
-
-    const [aboutContentVisible, setAboutContentVisible] = useState(false);
-    const handleAboutToggle = () => {
-        setAboutContentVisible(!aboutContentVisible); // Toggle the visibility of the about content
-      };
+const About = ({ isOpen, onToggle }) => {
+    //
+    // const [aboutContentVisible, setAboutContentVisible] = useState(false);
+    // const handleAboutToggle = () => {
+    //     setAboutContentVisible(!aboutContentVisible); // Toggle the visibility of the about content
+    //   };
 
   return (
     <>
-      <Link to="/about" className="navbar__link" onClick={handleAboutToggle}>
+      {/*<Link to="/about" className="navbar__link" onClick={handleAboutToggle}>*/}
+          <Link to="/about" className={`navbar__link ${isOpen ? 'active' : ''}`} onClick={onToggle}>
         About Us
       </Link>
 
-      {aboutContentVisible && (
+      {isOpen && (
         <div className="about-content-container">
           <div className="about-content">
             <h3>About Us</h3>

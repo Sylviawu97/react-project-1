@@ -3,16 +3,17 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Link } from 'react-router-dom';
 
-function BookingCalendar() {
+function BookingCalendar({ isOpen, onToggle }) {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [isSprayed, setIsSprayed] = useState(false);
   const [usesPeePad, setUsesPeePad] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [isBookingVisible, setIsBookingVisible] = useState(false);
+  // const [isBookingVisible, setIsBookingVisible] = useState(false);
 
   const handleBookingToggle = () => {
-    setIsBookingVisible(!isBookingVisible);
+    onToggle()
+    // setIsBookingVisible(!isBookingVisible);
     setStartDate(null);
     setEndDate(null);
     setIsSprayed(false);
@@ -54,7 +55,7 @@ function BookingCalendar() {
   };
 
   const handleClose = () => {
-    setIsBookingVisible(false);
+    onToggle()
   };
 
   return (
@@ -62,7 +63,7 @@ function BookingCalendar() {
       <Link to="/booking" className="navbar__link" onClick={handleBookingToggle}>
         Booking
       </Link>
-      {isBookingVisible && (
+      {isOpen && (
         <div className="booking-form">
           <h2>Booking Calendar</h2>
           <div>

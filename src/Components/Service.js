@@ -1,20 +1,20 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Service = () => {
-    const [serviceContentVisible, setServiceContentVisible] = useState(false);
-    const handleServiceToggle = () => {
-        setServiceContentVisible(!serviceContentVisible); // Toggle the visibility of the about content
-      };
+const Service = ({ isOpen, onToggle }) => {
+    // const [serviceContentVisible, setServiceContentVisible] = useState(false);
+    // const handleServiceToggle = () => {
+    //     setServiceContentVisible(!serviceContentVisible); // Toggle the visibility of the about content
+    //   };
 
 
   return (
     <div>
-    <Link to="/service" className="navbar__link" onClick={handleServiceToggle}>
+    <Link to="/service" className={`navbar__link ${isOpen ? 'active' : ''}`} onClick={onToggle}>
         Service
       </Link>
      
-      {serviceContentVisible && (
+      {isOpen && (
         <div className="service-content-container">
           <div className="service-content">
             <h3>Service</h3>
@@ -50,7 +50,6 @@ To make your dog's stay even more enjoyable, we provide complimentary goat milk 
             </div>
             </div>
       )}
-    ;
     </div>
   )
       }
