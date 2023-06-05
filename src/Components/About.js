@@ -25,7 +25,9 @@ const About = ({ isOpen, onToggle }) => {
 Choose Sylvia's for Unmatched Care:
 When you choose our dog boarding service, you can rest assured that your beloved pet will receive the utmost care, attention, and love. Our dedicated staff is committed to providing a safe and comfortable environment, ensuring that your dog feels right at home throughout their stay.
 </p>
-Book your dog's boarding experience with us today and give them the vacation they deserve. Contact [Your Service Name] at [Contact Information] to schedule a reservation or to inquire about our services. We look forward to welcoming your furry friend into our family!
+Book your dog's boarding experience with us today and give them the vacation they deserve.
+ Contact Sylvia at ......... to schedule a reservation or to inquire about our services. 
+ We look forward to welcoming your furry friend into our family!
          
           </div>
         </div>

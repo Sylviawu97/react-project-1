@@ -1,9 +1,9 @@
 body {
-  background-image: url("https://a-z-animals.com/media/2022/11/iStock-1302660208.jpg");
+  background-image: url("../public/background.jpg");
   background-size: cover;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Times New Roman", Times, serif;
 }
+
